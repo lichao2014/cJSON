@@ -233,6 +233,8 @@ CJSON_PUBLIC(cJSON_bool) cJSON_Compare(const cJSON * const a, const cJSON * cons
 CJSON_PUBLIC(cJSON *) cJSON_ParseWithOpts(const char *value, const char **return_parse_end, cJSON_bool require_null_terminated);
 
 CJSON_PUBLIC(void) cJSON_Minify(char *json);
+  
+CJSON_PUBLIC(cJSON *) cJSON_ParseWithOptsEx(const char *value, size_t len, const char **return_parse_end, cJSON_bool require_null_terminated);
 
 /* Macros for creating things quickly. */
 #define cJSON_AddNullToObject(object,name) cJSON_AddItemToObject(object, name, cJSON_CreateNull())
